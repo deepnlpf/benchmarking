@@ -1,0 +1,73 @@
+\begin{table}[h!]
+        
+    \centering
+    \footnotesize
+    \caption{ Tempo de Execução Individual de Cada Ferramenta de PLN. }
+    \label{tbl:runtime_all_tools_pln}
+        
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \rowcolor[HTML]{EFEFEF} 
+        \multicolumn{1}{|c|}{
+        \cellcolor[HTML]{EFEFEF}
+        \textbf{FERRAMENTAS}} & 
+        \textbf{PIPELINE} & 
+        \textbf{
+        \begin{tabular}[c]{@{}c@{}}
+            CORPUS I\\ Runtime (seg.)
+        \end{tabular}} & 
+        \textbf{
+        \begin{tabular}[c]{@{}c@{}}
+            CORPUS II\\ Runtime (seg.)
+        \end{tabular}} & 
+        \textbf{
+        \begin{tabular}[c]{@{}c@{}}
+            CORPUS III\\ Runtime (seg.)
+        \end{tabular}} \\ 
+        \hline
+        Stanford CoreNLP & 
+        \begin{tabular}[c]{@{}c@{}}
+            tokenize, ssplit,\\ 
+            pos, lemma, ner, \\ 
+            parse, depparse,\\ 
+            truecase, dcoref
+        \end{tabular} & 270 & 776 & 1630 \\ 
+        \hline
+        SpaCy & 
+        \begin{tabular}[c]{@{}c@{}}
+            pos, tag,\\ 
+            shape, label, \\
+            is\_alpha, \\ 
+            is\_title,\\ 
+            like\_num
+        \end{tabular} & 12.3 & 46.3 & 91.2 \\ 
+        \hline
+        SEMAFOR & frame parsing semantic & 87.3 & 243 & 448 \\ 
+        \hline
+        CogComp & 
+        \begin{tabular}[c]{@{}c@{}}
+            srl nom, \\ 
+            srl verb, \\ 
+            srl prep, \\ 
+            shallow parse, \\ 
+            ner ontonotes
+        \end{tabular} & 1050 & 5110 & 9350 \\ 
+        \hline
+        FreeLing & 
+        \begin{tabular}[c]{@{}c@{}}
+            wsd, \\ 
+            wordnet sumo, \\ 
+            svo triples srl
+        \end{tabular} & 398 & 1570 & 4990 \\ 
+        \hline
+        PyWSD & wsd & 1020 & 3760 & 7360 \\ 
+        \hline
+        \multicolumn{2}{|c|}{
+        \cellcolor[HTML]{EFEFEF}
+        \textbf{TOTAL}} & 2837.6 & 11505.3 & 23899.2 \\ 
+        \hline
+    \end{tabular}
+    
+    \par\medskip\textbf{Fonte:} do autor. \par\medskip
+        
+\end{table}
